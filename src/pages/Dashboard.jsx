@@ -19,6 +19,7 @@ const Dashboard = () => {
     const checkLoginStatus = async () => {
         const token = localStorage.getItem("token");
         if(token === undefined || token === ""){
+            console.log("TOKen value is " + token);
             toast.error("You are not logged in");
             navigate("/signup");
         }else{
